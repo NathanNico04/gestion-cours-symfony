@@ -5,10 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        GOODUSER: bibi
-        UID: 501
-        MAIL: bidule@univ-orleans.fr
-        NOM: "Machin Bidule"
+        GOODUSER: zarkos
+        UID: 1000
+        MAIL: nathan.nicolessi@univ-orleans.fr
+        NOM: "Nathan Nicolessi"
     container_name: my-good-container
     volumes:
     - ./dev:/var/www/html
