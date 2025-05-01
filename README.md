@@ -33,3 +33,18 @@
 - Création de la table dans la base de données, création d'un fichier migration `symfony console make:migration` et ensuite création de la table `symfony console doctrine:migrations:migrate` (à faire lors de la récupération des fichiers via git)
 
 - Création d'une fixture, installer le package fixture `symfony composer require orm-fixtures --dev`, ensuite `symfony console make:fixture` et pour finir charger les fixtures `symfony console doctrine:fixtures:load`
+
+- La commande `symfony console make:crud Cours` va génèrer automatiquement toute la structure CRUD (Create, Read, Update, Delete) pour l'entité `Cours` et l'url par défaut générée est `http://localhost:8000/cours` qui donne accès à `la liste des cours`, un bouton `Créer nouveau` et des actions `modifier` et `supprimer`
+
+
+| Fichier                                          | Rôle                                                              |
+|--------------------------------------------------|-------------------------------------------------------------------|
+| `src/Controller/CoursController.php`            | Le contrôleur avec toutes les actions CRUD                       |
+| `src/Form/CoursType.php`                        | Le formulaire pour créer/modifier un `Cours`                     |
+| `templates/cours/` (plusieurs fichiers Twig)    | Les vues pour lister, afficher, éditer, créer, supprimer         |
+
+
+
+## Mon application
+
+
